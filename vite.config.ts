@@ -9,8 +9,13 @@ export default defineConfig(({ mode }) => ({
     host: "0.0.0.0",
     port: 5000,
     // THE CRITICAL FIX: Allow all hosts for Replit proxy
-    allowedHosts: true, 
-    
+    allowedHosts: true,
+    // Additional headers to prevent caching issues
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    }
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
