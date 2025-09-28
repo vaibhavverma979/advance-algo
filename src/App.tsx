@@ -19,6 +19,9 @@ import ScholarshipAI from "@/pages/Scholarshipaii";
 import CollegeSearch from "@/pages/CollegeSearch";
 import StreamInformation from "@/pages/StreamInformation";
 import Counsellors from "@/pages/Counsellors";
+import ScholarshipRecommendations from "@/pages/ScholarshipRecommendations";
+import AptitudeTest from "@/pages/AptitudeTest";
+import CollegeRecommendations from "@/pages/CollegeRecommendations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +50,9 @@ const App = () => (
               <Route path="/college/dashboard" element={<CollegeDashboard />} />
               <Route path="/student/career-ai" element={<AICareerChat />} />
               <Route path="/student/scholarship-ai" element={<ScholarshipAI />} />
+              <Route path="/student/scholarship-recommendations" element={<ScholarshipRecommendations />} />
+              <Route path="/student/aptitude-test" element={<AptitudeTest />} />
+              <Route path="/student/college-recommendations" element={<CollegeRecommendations />} />
               <Route path="/student/colleges" element={<CollegeSearch />} />
               <Route path="/student/streams" element={<StreamInformation />} />
               <Route path="/student/counsellors" element={<Counsellors />} />
